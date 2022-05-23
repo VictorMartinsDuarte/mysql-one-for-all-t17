@@ -142,7 +142,7 @@ VALUES
   ("He's Walking Away", 9, 159, 5),
   ("He's Trouble", 9, 138, 5),
   ('I Heard I Want To Bo Alone', 9, 120, 5),
-  ('I Ride Alone', 9, 141, 5),
+  ('I Ride Alone', 9, 151, 5),
   ('Honey', 10, 79, 6),
   ('You Cheated On Me', 10, 95, 6),
   ("Wouldn't It Be Nice", 10, 213, 6),
