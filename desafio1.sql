@@ -57,21 +57,21 @@ CREATE TABLE IF NOT EXISTS SpotifyClone.history (
   user_id INT NOT NULL,
   song_id INT NOT NULL,
   artist_id INT NOT NULL,
-  reproduction_date DATETIME NOT NULL,
+  reproduction_history DATETIME NOT NULL,
   CONSTRAINT PRIMARY KEY (user_id, song_id, artist_id),
   FOREIGN KEY (user_id) REFERENCES users (user_id),
   FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
   FOREIGN KEY (song_id) REFERENCES artist_songs (song_id)
 ) engine = InnoDB;
 
-INSERT INTO plans (plan_info, plan_value)
+INSERT INTO SpotifyClone.plans (plan_info, plan_value)
 VALUES
   ('gratuito', 0),
-  ('familiar', 7,99),
-  ('universitário', 5,99),
-  ('pessoal', 6,99);
+  ('familiar', 7.99),
+  ('universitário', 5.99),
+  ('pessoal', 6.99);
 
-INSERT INTO users (username, age, plan_id, signature_date)
+INSERT INTO SpotifyClone.users (username, age, plan_id, signature_date)
 VALUES
   ('Thati', 23, 1, '2019-10-20'),
   ('Cintia', 35, 2, '2017-12-30'),
@@ -84,7 +84,7 @@ VALUES
   ('Angelina', 42, 2, '2018-04-29'),
   ('Paul', 46, 2, '2017-01-17');
 
-INSERT INTO artists (artist_name)
+INSERT INTO SpotifyClone.artists (artist_name)
 VALUES
   ('Walter Phoenix'),
   ('Peter Strong'),
@@ -93,7 +93,7 @@ VALUES
   ('Tyler Isle'),
   ('Fog');
 
-INSERT INTO albums (album_name, artist_id, launch_year)
+INSERT INTO SpotifyClone.albums (album_name, artist_id, launch_year)
 VALUES
   ('Envious', 1, 1990),
   ('Exuberant', 1, 1993),
@@ -106,7 +106,7 @@ VALUES
   ('No guarantees', 5, 2015),
   ('Apparatus', 6, 2015);
 
-INSERT INTO artist_songs (songs, album_id, duration_seconds, artist_id)
+INSERT INTO SpotifyClone.artist_songs (songs, album_id, duration_seconds, artist_id)
 VALUES
   ('Soul For Us', 1, 200, 1),
   ('Reflections of Magic', 1, 163, 1),
@@ -149,7 +149,7 @@ VALUES
   ('Baby', 10, 136, 6),
   ('You Make Me Feel So..', 10, 83, 6);
 
-INSERT INTO followed_artists (user_id, artist_id)
+INSERT INTO SpotifyClone.followed_artists (user_id, artist_id)
 VALUES
   (1, 1),
   (1, 4),
@@ -174,7 +174,7 @@ VALUES
   (10, 2),
   (10, 6);
 
-INSERT INTO history (user_id, song_id, artist_id, reproduction_date)
+INSERT INTO SpotifyClone.history (user_id, song_id, artist_id, reproduction_history)
 VALUES
   (1, 36, 6, '2020-02-28 10:45:55'),
   (1, 25, 5, '2020-05-02 05:30:35'),
